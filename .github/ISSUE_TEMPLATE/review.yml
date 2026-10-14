@@ -1,0 +1,50 @@
+name: Review
+description: Review a claim in a Saluca Labs paper or a Check the Record episode
+title: "Review: <paper or episode> - <the claim, in a few words>"
+labels: ["review"]
+body:
+  - type: input
+    id: work
+    attributes:
+      label: Paper (DOI) or episode
+      description: The paper's DOI, and the episode link if it came from Check the Record.
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim
+      description: Quote the exact sentence or result you are checking.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: What you did
+      description: Reproduced, re-derived, tested, or read against other work. Enough detail for someone to repeat it.
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: What you found
+      options:
+        - Holds
+        - Does not hold
+        - Partly holds
+        - Cannot tell from the record
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Data, code, citations, or reasoning. Say what would change your mind.
+    validations:
+      required: true
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      options:
+        - label: I have a financial relationship with Saluca Labs (including as a supporter). If ticked, say what below.
