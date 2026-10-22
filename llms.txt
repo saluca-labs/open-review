@@ -4,18 +4,24 @@
 
 There is no code here. A review is a GitHub issue opened from the Review form and labelled `review`; blank issues are turned off. Corrections cite each paper by its Zenodo concept DOI, never a version DOI.
 
-## Docs
+If a file, form or process is not listed here, it does not exist in this repository. The complete surface is one issue form, its config, and CORRECTIONS.md; reviews are GitHub issues labelled `review`.
+
+## Send a review
 
 - [README](https://github.com/saluca-labs/open-review/blob/main/README.md): how to send a review, what happens to it, what is in scope
-- [CORRECTIONS.md](https://github.com/saluca-labs/open-review/blob/main/CORRECTIONS.md): every correction and review outcome, newest first
+- [Open a review](https://github.com/saluca-labs/open-review/issues/new?template=review.yml): the form itself
+- [Review issue form](https://github.com/saluca-labs/open-review/blob/main/.github/ISSUE_TEMPLATE/review.yml): required fields work, claim, method, verdict, evidence; optional financial-relationship disclosure
 
-## Code
+## See what was corrected
 
-- [Review issue form](https://github.com/saluca-labs/open-review/blob/main/.github/ISSUE_TEMPLATE/review.yml): the fields a review must fill
+- [CORRECTIONS.md](https://github.com/saluca-labs/open-review/blob/main/CORRECTIONS.md): every correction and review outcome, newest first, each work named by concept DOI
+- [Review issues](https://github.com/saluca-labs/open-review/issues?q=label%3Areview): every review filed, open or closed
+
+## Change this repo
+
+- [AGENTS.md](https://github.com/saluca-labs/open-review/blob/main/AGENTS.md): orientation and rules for agents editing this repo
 - [Issue template config](https://github.com/saluca-labs/open-review/blob/main/.github/ISSUE_TEMPLATE/config.yml): blank issues disabled
 
 ## Optional
 
-- [Open a review](https://github.com/saluca-labs/open-review/issues/new?template=review.yml): the form itself
-- [AGENTS.md](https://github.com/saluca-labs/open-review/blob/main/AGENTS.md): rules for agents editing this repo
-- [llms-full.txt](https://github.com/saluca-labs/open-review/blob/main/llms-full.txt): this header plus README.md and CORRECTIONS.md in full
+- [llms-full.txt](https://github.com/saluca-labs/open-review/blob/main/llms-full.txt): this header plus README.md, CORRECTIONS.md and AGENTS.md in full
