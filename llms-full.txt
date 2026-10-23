@@ -1,0 +1,171 @@
+# Open review: Saluca Labs research
+
+> Public peer review of Saluca Labs papers and the claims Check the Record episodes make about them, through a GitHub issue form, plus the log of every correction we have made. No licence has been chosen yet.
+
+There is no code here. A review is a GitHub issue opened from the Review form and labelled `review`; blank issues are turned off. Corrections cite each paper by its Zenodo concept DOI, never a version DOI.
+
+If a file, form or process is not listed here, it does not exist in this repository. The complete surface is one issue form, its config, and CORRECTIONS.md; reviews are GitHub issues labelled `review`.
+
+The full text of this repository's prose docs, concatenated, each under its path. Regenerate this file whenever one of them changes.
+
+## README.md
+
+### Open review: Saluca Labs research
+
+Some of our work has not yet been checked by anyone outside Saluca Labs. When a *Check the Record* episode
+covers one of our own papers and the only record is our own, we say so on air ("not yet independently
+checked") and ask for a review here, in public.
+
+**Reviewing is free, and anyone may do it.** Every review is published, whether it supports us or refutes us.
+
+#### Status
+
+Maintained, and open for reviews. As of 2026-10-22 no review issues have been filed yet, and
+[CORRECTIONS.md](CORRECTIONS.md) holds one entry (2026-10-03, from our own re-check).
+
+#### Install
+
+Nothing to install: this repo is a process, an issue form and a corrections log. You need a GitHub account
+to open an issue.
+
+#### Quickstart
+
+1. Open [a new Review issue](https://github.com/saluca-labs/open-review/issues/new?template=review.yml).
+2. Fill in the required fields: the paper's DOI or the episode, the claim, what you did, what you found, and
+   your evidence.
+3. Submit. The issue is public at once and carries the `review` label.
+
+#### Usage
+
+##### How to send a review
+
+Open an issue with the **Review** template. Tell us:
+
+1. **What you are reviewing:** the paper (its DOI) and, if it came from an episode, which one.
+2. **The claim:** quote the exact sentence or result you are checking.
+3. **What you did:** reproduced it, re-derived it, tested it, or read it against other work.
+4. **What you found:** holds, does not hold, or partly. Include the evidence, and say what would change your mind.
+
+A review that refutes a claim is the most useful kind. You do not need to be an academic, and you do not need
+to be polite about the claim, only about the people.
+
+##### What we do with it
+
+- Every review stays public here as an issue.
+- If a review shows we were wrong, we correct the record: a new version of the paper (cited by its concept DOI,
+  so the citation always resolves to the corrected one), an entry in [CORRECTIONS.md](CORRECTIONS.md), and,
+  where an episode made the claim, a correction on the channel.
+- We record what happened either way. A review we disagree with stays up, with our answer beside it.
+- Money never affects a verdict or which reviews are published.
+
+##### What is in scope
+
+Papers by Saluca Labs and the claims our episodes make about them. Reviews of other people's work belong to
+them, not here.
+
+#### Architecture
+
+There is no code. The pieces are:
+
+- [`.github/ISSUE_TEMPLATE/review.yml`](.github/ISSUE_TEMPLATE/review.yml): the Review issue form. Required
+  fields: work, claim, method, verdict (Holds, Does not hold, Partly holds, Cannot tell from the record),
+  evidence. An optional checkbox discloses a financial relationship with Saluca Labs.
+- [`.github/ISSUE_TEMPLATE/config.yml`](.github/ISSUE_TEMPLATE/config.yml): turns off blank issues, so every
+  issue starts from the form.
+- [`CORRECTIONS.md`](CORRECTIONS.md): every correction to our published work, newest first, each naming the
+  work by concept DOI.
+
+#### Citation
+
+No archived record for this repo. The works reviewed here are cited by concept DOI in
+[CORRECTIONS.md](CORRECTIONS.md) and in each review issue.
+
+#### License
+
+No licence has been chosen for this repo yet, so no licence is granted beyond what GitHub's terms of service
+allow.
+
+#### Links
+
+- [CORRECTIONS.md](CORRECTIONS.md): the corrections and review log
+- [Saluca Labs on Zenodo](https://zenodo.org/search?q=%22Saluca%20Agentic%20AI%20Research%20Team%22): our
+  published papers
+- [saluca-labs/roadmap](https://github.com/saluca-labs/roadmap): product direction, decided in the open
+
+Saluca Labs
+
+_Last updated: 2026-10-22_
+
+## CORRECTIONS.md
+
+### Corrections and review log
+
+Every review we receive, and every correction we make to our published work, is recorded here. Newest first.
+Each entry names the work (by concept DOI), what was claimed, what was found, and what we changed.
+
+| Date | Work (concept DOI) | Claim | Finding | Source | What we changed |
+|---|---|---|---|---|---|
+| 2026-10-03 | Curated Context, Not Weight Surgery ([10.5281/zenodo.21247053](https://doi.org/10.5281/zenodo.21247053)) | Claims about the admission filter and the routing results | Overstated in places. Found in our own re-check, prompted by outside feedback. | Internal review | New version v0.3 published on Zenodo |
+
+## AGENTS.md
+
+### AGENTS.md
+
+Instructions for AI coding agents working in this repository.
+
+#### What this is
+
+A public review process for Saluca Labs papers: a GitHub issue form, and a log of every correction made.
+There is no code.
+
+#### Read in this order
+
+1. `README.md`: how a review is sent, what happens to it, what is in scope.
+2. `CORRECTIONS.md`: the log, and the format a new row must follow.
+3. `.github/ISSUE_TEMPLATE/review.yml`: the fields a reviewer fills.
+
+#### What you can and cannot see
+
+- You can see the form, the config and the log.
+- Reviews themselves are GitHub issues labelled `review`, not files. Read them with
+  `gh issue list --repo saluca-labs/open-review --label review --state all`.
+- The papers are on Zenodo, not here. Cite them by concept DOI.
+
+#### The only numbers to trust
+
+- How many corrections exist: the table rows in `CORRECTIONS.md`.
+- How many reviews exist: the `gh issue list` command above. Any count written in prose (including
+  the README's Status line) is a snapshot with a date.
+
+#### Setup
+
+Nothing to install. The repo is Markdown and two GitHub issue-template YAML files.
+
+#### Test
+
+```sh
+python -c "import yaml; [yaml.safe_load(open(f, encoding='utf-8')) for f in ('.github/ISSUE_TEMPLATE/review.yml', '.github/ISSUE_TEMPLATE/config.yml')]"
+```
+
+Passing: no output, exit 0. GitHub renders issue forms from the default branch only, so after a
+change to `review.yml` is merged, open the new-issue page and check the form renders.
+
+#### Conventions
+
+- `CORRECTIONS.md` is newest first, one table row per correction. Name the work by its Zenodo concept
+  DOI, never a version DOI. Say what was claimed, what was found, the source, and what changed.
+- A correction row is added only when the correction itself has been made (for example the new paper
+  version is published). Do not add rows for planned corrections.
+- When README.md, CORRECTIONS.md or AGENTS.md changes, regenerate `llms-full.txt` in the same PR: the `llms.txt`
+  header, then README.md, CORRECTIONS.md and AGENTS.md, each under its path.
+- No em-dashes.
+
+#### Do not
+
+- Edit or delete an existing `CORRECTIONS.md` row. If one is wrong, add a new row that corrects it.
+- Close, edit or hide a review issue, or answer one on Saluca Labs' behalf.
+- Commit secrets, hostnames, internal paths or personal emails.
+
+#### Done means
+
+The YAML parses, links in README.md and llms.txt resolve, and `llms-full.txt` matches the docs.
