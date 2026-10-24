@@ -1,6 +1,6 @@
 # Open review: Saluca Labs research
 
-> Public peer review of Saluca Labs papers and the claims Check the Record episodes make about them, through a GitHub issue form, plus the log of every correction we have made. No licence has been chosen yet.
+> Public peer review of Saluca Labs papers and the claims Check the Record episodes make about them, through a GitHub issue form, plus the log of every correction we have made. Licence: FSL-1.1-Apache-2.0, source-available, converting to Apache 2.0 after two years.
 
 There is no code here. A review is a GitHub issue opened from the Review form and labelled `review`; blank issues are turned off. Corrections cite each paper by its Zenodo concept DOI, never a version DOI.
 
