@@ -1,3 +1,5 @@
+![open-review](docs/img/banner-2026-10-23.jpg)
+
 # Open review: Saluca Labs research
 
 Some of our work has not yet been checked by anyone outside Saluca Labs. When a *Check the Record* episode
